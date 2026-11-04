@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ed">
+  <meta name="description" content="An Ethiopian-inspired runway lookbook concept with six illustrative looks.">
+  <title>Habesha Lebs — A Runway Lookbook Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/habesha-models.png" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Habesha Lebs home">HABESHA <span>LEBS</span><span class="brand-mark" aria-hidden="true">✳</span></a>
+      <div class="header-center"><span class="tiny-rule"></span> THE RUNWAY EDIT <span class="tiny-rule"></span></div>
+      <div class="header-right"><span class="demo-pill">CONCEPT DEMO</span><span class="header-divider"></span><span class="bag-label">DEMO BAG <span id="bag-count">(0)</span></span></div>
+    </header>
+
+    <main>
+      <section class="stage" id="stage" tabindex="0" aria-label="Interactive lookbook. Drag, scroll, use the arrow keys, or use the previous and next buttons to change looks.">
+        <div class="stage-grid" aria-hidden="true"></div>
+        <div class="models" id="models" aria-hidden="true"></div>
+        <div class="intro">
+          <div class="eyebrow"><span class="dot"></span> ETHIOPIAN-INSPIRED / 2027 CONCEPT</div>
+          <h1>Woven for<br><em>every moment.</em></h1>
+          <p>Six expressions of Habesha dress, imagined for a modern editorial collection. Explore the details, one look at a time.</p>
+        </div>
+        <div class="stage-bottom">
+          <div class="current-look">
+            <div class="look-kicker">THE LOOK <span class="line-rule"></span> <span id="look-counter">01 / 06</span></div>
+            <div class="look-name" id="look-name">The Golden Thread</div>
+            <div class="look-description" id="look-description">Ivory, gold, and an airy netela.</div>
+          </div>
+          <div class="stage-controls">
+            <span class="gesture-hint">DRAG TO EXPLORE</span>
+            <button class="arrow" id="previous" type="button" aria-label="Previous look">←</button>
+            <button class="arrow" id="next" type="button" aria-label="Next look">→</button>
+          </div>
+        </div>
+        <div class="look-progress" id="look-progress" aria-hidden="true"></div>
+        <div class="ring" id="ring" aria-hidden="true"></div>
+      </section>
+
+      <aside class="rail" aria-label="Illustrative pieces from the collection">
+        <div class="rail-head"><span>THE PIECES</span><span>DEMO PRICES · NOT FOR SALE</span></div>
+        <div class="cards-viewport" id="cards-viewport"><div class="cards" id="cards"></div></div>
+        <div class="rail-foot"><span>ILLUSTRATIVE PRICES IN ETB</span><span>NOT FOR SALE</span></div>
+      </aside>
+    </main>
+  </div>
+  <div class="loading" id="loading" aria-hidden="true"><span>HABESHA LEBS</span><span>LOADING THE LOOKBOOK…</span></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
